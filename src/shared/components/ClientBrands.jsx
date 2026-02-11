@@ -1,0 +1,96 @@
+import SectionHeader from "@/shared/components/SectionHeader";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
+const cards = [
+  {
+    href: "https://itaacademia.com/",
+    src: "/images/brands/ita-academia.webp",
+    alt: "ita-academia",
+  },
+  {
+    href: "https://kalewal.com/",
+    src: "/images/brands/kaliwal-fit.webp",
+    alt: "kaliwal-fit",
+  },
+  {
+    href: "https://itartificer.com/",
+    src: "/images/brands/mozbytech.webp",
+    alt: "mozbytech",
+  },
+  {
+    href: "https://traininghunts.com/",
+    src: "/images/brands/shopme-online.webp",
+    alt: "shopme-online",
+  },
+  {
+    href: "https://tasleemalquran.com/",
+    src: "/images/brands/taleemalquran.webp",
+    alt: "taleemalquran",
+  },
+  {
+    href: "https://writepure.com/",
+    src: "/images/brands/writepure.webp",
+    alt: "writepure",
+  },
+];
+
+const ClientBrands = () => {
+  return (
+    <section>
+      <div className="container py-20">
+        <SectionHeader
+          title="Our Growing Family of Brands"
+          description="From training and tech to e-commerce and education, our group of companies is driving impact across multiple industries."
+        />
+
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={30}
+          slidesPerView={2}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          grabCursor={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          }}
+          className="w-full"
+        >
+          {cards.map(({ href, src, alt }, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center"
+            >
+              <a
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block max-w-45 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+              >
+                <img
+                  src={src}
+                  className="w-full h-auto object-contain"
+                  alt={alt}
+                />
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+};
+
+export default ClientBrands;

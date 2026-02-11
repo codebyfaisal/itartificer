@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+/* 
+  =======================================
+      Theme Configuration & Variables
+  =======================================
+*/
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 40%);
+  --heading-foreground: hsl(206, 69%, 18%);
+
+  --primary: hsl(136, 54%, 51%);
+  --primary-foreground: hsl(0, 0%, 100%);
+
+  --secondary: hsl(206, 69%, 18%);
+  --secondary-foreground: hsl(0, 0%, 96%);
+
+  --destructive: hsl(0, 72%, 52%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+
+  --danger: hsl(0, 65%, 45%);
+  --danger-foreground: hsl(0, 0%, 100%);
+
+  --warning: hsl(38, 92%, 50%);
+  --warning-foreground: hsl(26, 83%, 14%);
+
+  --info: hsl(206, 69%, 45%);
+  --info-foreground: hsl(0, 0%, 100%);
+
+  --success: hsl(136, 54%, 41%);
+  --success-foreground: hsl(0, 0%, 100%);
+
+  --border: hsl(210, 16%, 82%);
+  --input: hsl(0, 0%, 100%);
+  --ring: hsl(136, 54%, 51%);
+
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-heading-foreground: var(--heading-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --breakpoint-xs: 425px;
+  --breakpoint-mdl: 940px;
+
+  --container-width: 1200px;
+
+  /* 14px = 0.875rem
+     15px = 0.9375rem
+     18px = 1.125rem
+     20px = 1.25rem
+     28px = 1.75rem
+     50px = 3.125rem  */
+
+  --text-md: 0.9375rem;
+  --text-3xl: 1.75rem;
+  --text-5xl: 3.125rem;
+}
+
+/*
+--- Font Sizes --- 
+  sm=14
+  md=16
+  lg=18
+  xl=20
+  3xl=28
+  5xl=50
+*/
+
+/* 
+  =======================================
+          Base Styles & Resets
+  =======================================
+*/
+* {
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif !important;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: var(--color-foreground);
+  background-color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-foreground);
+}
+
+p,
+li,
+a,
+span,
+input,
+textarea,
+select,
+label,
+button {
+  font-size: var(--text-sm);
+  line-height: 1.8;
+}
+
+button,
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+/* 
+  =======================================
+                  Utilities
+  =======================================
+*/
+@layer utilities {
+  .container {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary/10;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-lg;
+}
+
+/* 
+  =======================================
+      Custom Components / Classes
+  =======================================
+*/
+.styled-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.styled-list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: var(--primary);
+  border-radius: 1px;
+}
+
+/* 
+  =======================================
+          Animations & Keyframes
+  =======================================
+*/
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 90%;
+  }
+}
+
+@keyframes scrolling-ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 
+  =======================================
+              Media Queries
+  =======================================
+*/
+@media screen and (max-width: 768px) {
+  .text-lg {
+    font-size: 1.05rem;
+  }
+
+  .text-3xl {
+    font-size: 1.6rem;
+  }
+}
