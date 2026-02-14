@@ -1,6 +1,6 @@
 import { MailIcon, PhoneIcon } from "lucide-react";
 import { LuMapPin } from "react-icons/lu";
-import { itArtificerData } from "../data/contact";
+import { itArtificerData } from "@/shared/db/itArtificer.js";
 
 const ContactInfo = () => {
   const { address, email, phone } = itArtificerData;

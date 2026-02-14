@@ -23,7 +23,6 @@ const ContactForm = ({ title = null }) => {
   const [formError, setFormError] = useState(initialFormError);
 
   const handleChange = (e) => {
-    console.log(e.target.name, e.target.value);
     setFormData((prev) => ({
       ...prev,
       [e.target.name]:
@@ -45,7 +44,6 @@ const ContactForm = ({ title = null }) => {
     setFormError(errors);
 
     if (Object.keys(errors).length > 0) {
-      console.log(formData);
       document
         .querySelector("main")
         .scrollIntoView({ behavior: "smooth", block: "center" });

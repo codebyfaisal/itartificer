@@ -1,15 +1,21 @@
 import { PageHeader } from "@/shared/components";
-import { itArtificerData } from "@/shared/data/contact";
+import SEO from "@/shared/components/SEO";
+import { itArtificerData } from "@/shared/db/itArtificer";
 import Divider from "@/shared/ui/Divider";
 import { Link } from "react-router";
 
 const Community = () => {
   return (
     <>
+      <SEO
+        title="Community Guidelines"
+        description="IT Artificer's Community Guidelines."
+        path="/community-guidelines"
+      />
       <PageHeader title="Community Guidelines" />
 
-      <section className="container pb-10">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <section>
+        <div className="max-w-4xl mx-auto space-y-8 pb-10">
           {/* Header */}
           <div className="space-y-4">
             <p className="font-bold">Effective Date: 09-06-2025</p>

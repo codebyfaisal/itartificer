@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PageHeader } from "@/shared/components";
+import SEO from "@/shared/components/SEO";
 import { Input, Select } from "@/shared/ui";
 import { SquareArrowRight } from "lucide-react";
 import { Link } from "react-router";
@@ -60,12 +61,17 @@ const Career = () => {
 
   return (
     <>
+      <SEO
+        title="Careers"
+        description="Join the IT Artificer team! Check out our current job openings and career opportunities."
+        path="/careers"
+      />
       <PageHeader title="Careers" />
 
       <section>
-        <div className="container">
+        <div className="container space-y-10">
           {/* Filters */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-1">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-2">
             <Input
               type="text"
               placeholder="Search Job"
@@ -115,12 +121,12 @@ const Career = () => {
           </div>
 
           {/* Job List */}
-          <div className="space-y-4 py-10 px-1">
+          <div className="space-y-4 px-2">
             {filteredCareers.length > 0 ? (
               filteredCareers.map((career) => (
                 <div
                   key={career.id}
-                  className="rounded-md p-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border-b border-foreground/5 shadow-xs"
+                  className="py-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border-b border-foreground/5 shadow-xs"
                 >
                   <h3 className="text-xl font-semibold flex-1 min-w-50">
                     <Link
@@ -139,7 +145,7 @@ const Career = () => {
 
                   <Link
                     to="/"
-                    className="text-secondary font-medium flex items-center gap-2 hover:underline decoration-2 underline-offset-4 transition-all whitespace-nowrap w-full lg:w-auto group"
+                    className="text-primary font-medium flex items-center gap-2 hover:underline decoration-2 underline-offset-4 transition-all whitespace-nowrap w-full lg:w-auto group"
                   >
                     More Details
                     <SquareArrowRight

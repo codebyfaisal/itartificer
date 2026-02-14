@@ -1,10 +1,16 @@
 import { ContactInfo, PageHeader } from "@/shared/components";
-import { itArtificerData } from "@/shared/data/contact";
+import SEO from "@/shared/components/SEO";
+import { itArtificerData } from "@/shared/db/itArtificer";
 import { Link } from "react-router";
 
 const Terms = () => {
   return (
     <>
+      <SEO
+        title="Terms & Conditions"
+        description="Read IT Artificer's Terms & Conditions."
+        path="/terms-&-conditions"
+      />
       <PageHeader title="Terms & Conditions" />
 
       <section className="container pb-10">

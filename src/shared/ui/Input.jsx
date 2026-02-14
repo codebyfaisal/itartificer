@@ -40,7 +40,7 @@ const Input = ({
         onChange={onChange}
         name={name}
         className={cn(
-          "w-full px-4 py-2 ring ring-foreground/20 focus:ring-primary focus:ring-2 rounded-md",
+          "w-full px-4 py-2.5 ring ring-inset ring-foreground/10 focus:ring-primary focus:ring-2 rounded-md transition-all duration-300",
           className.input,
         )}
         {...props}

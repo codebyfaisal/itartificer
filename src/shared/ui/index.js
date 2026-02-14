@@ -1,8 +1,10 @@
-export { default as Button } from "./Button.jsx";
-export { default as Input } from "./Input.jsx";
-export { default as Select } from "./Select.jsx";
+import Button from "./Button.jsx";
+import Card from "./Card.jsx";
+import Input from "./Input.jsx";
+import Select from "./Select.jsx";
+import Loader from "./Loader.jsx";
+
+export { Button, Card, Input, Select, Loader };
 export { default as Checkbox } from "./Checkbox.jsx";
 export { default as Modal } from "./Modal.jsx";
 export { default as Textarea } from "./Textarea.jsx";
-export { default as Loader } from "./Loader.jsx";
-

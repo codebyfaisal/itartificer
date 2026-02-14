@@ -1,10 +1,10 @@
 export { default as SectionHeader } from "./SectionHeader";
 export { default as PageHeader } from "./PageHeader";
-export { default as LeadershipTeam } from "./LeadershipTeam";
-export { default as ClientFeedback } from "./ClientFeedback";
-export { default as CompanyStats } from "./CompanyStats";
-export { default as ClientBrands } from "./ClientBrands";
-export { default as ServiceHighlights } from "./ServiceSections";
+export { default as TeamSection } from "./TeamSection";
+export { default as TestemonialsSection } from "./TestemonialsSection";
+export { default as StatsSection } from "./StatsSection";
+export { default as ClientBrandsSection } from "./ClientBrandsSection";
+export { default as ServiceSection } from "./ServiceSection";
 export { default as FaqList } from "./FaqList";
 export { default as ContactForm } from "./ContactForm";
 export { default as ContactInfo } from "./ContactInfo";

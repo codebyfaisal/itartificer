@@ -16,7 +16,12 @@ const Textarea = ({
 }) => {
   const id = randomId();
   return (
-    <div className={cn("space-y-2", className.field)}>
+    <div
+      className={cn(
+        "relative flex flex-col items-start justify-center gap-2",
+        className.field,
+      )}
+    >
       {label && (
         <label
           htmlFor={id}
@@ -27,11 +32,13 @@ const Textarea = ({
       )}
       <textarea
         id={id}
+        name={name}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
         className={cn(
-          "w-full px-4 py-2 ring ring-foreground/20 focus:ring-primary focus:ring-2 rounded-md",
+          "w-full px-4 py-2.5 ring ring-inset ring-foreground/10 focus:ring-primary focus:ring-2 rounded-md transition-all duration-300",
+          className.input,
           className.input,
         )}
         {...props}

@@ -10,10 +10,13 @@ const CaseStudies = () => import("@/features/caseStudies/CaseStudies");
 const Contact = () => import("@/features/contact/Contact");
 const Products = () => import("@/features/products/Products");
 const ProductDetail = () => import("@/features/products/ProductDetail");
+const PrivacyPolicy = () => import("@/features/privacy/PrivacyPolicy");
+const BlogDetail = () => import("@/features/blogs/BlogDetail");
+const CaseStudyDetail = () => import("@/features/caseStudies/CaseStudyDetail");
 const Services = () => import("@/features/services/Services");
 const ServiceDetail = () => import("@/features/services/ServiceDetail");
 const About = () => import("@/features/about/About");
-const News = () => import("@/features/news/News");
+const Blogs = () => import("@/features/blogs/Blogs");
 const InsideLife = () => import("@/features/insideLife/InsideLife");
 const Faq = () => import("@/features/faq/Faq");
 const Terms = () => import("@/features/terms/Terms");
@@ -41,6 +44,10 @@ const router = createBrowserRouter([
         lazy: async () => ({ Component: (await CaseStudies()).default }),
       },
       {
+        path: "case-studies/:slug",
+        lazy: async () => ({ Component: (await CaseStudyDetail()).default }),
+      },
+      {
         path: "contact",
         lazy: async () => ({ Component: (await Contact()).default }),
       },
@@ -49,7 +56,7 @@ const router = createBrowserRouter([
         lazy: async () => ({ Component: (await Products()).default }),
       },
       {
-        path: "products/:slug/:subSlug",
+        path: "products/*",
         lazy: async () => ({ Component: (await ProductDetail()).default }),
       },
       {
@@ -66,10 +73,14 @@ const router = createBrowserRouter([
       },
       {
         path: "news-events",
-        lazy: async () => ({ Component: (await News()).default }),
+        lazy: async () => ({ Component: (await Blogs()).default }),
       },
       {
-        path: "life-inside-ita",
+        path: "news-events/:slug",
+        lazy: async () => ({ Component: (await BlogDetail()).default }),
+      },
+      {
+        path: "life-at-ita",
         lazy: async () => ({ Component: (await InsideLife()).default }),
       },
       {
@@ -81,13 +92,16 @@ const router = createBrowserRouter([
         lazy: async () => ({ Component: (await Terms()).default }),
       },
       {
+        path: "privacy-policy",
+        lazy: async () => ({ Component: (await PrivacyPolicy()).default }),
+      },
+      {
         path: "community-guidelines",
         lazy: async () => ({ Component: (await Community()).default }),
       },
       {
-        path:"features",
+        path: "features",
         lazy: async () => ({ Component: (await Features()).default }),
-
       },
       // {
       //   path: "brands",

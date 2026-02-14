@@ -8,11 +8,11 @@ const api = axios.create();
 
 api.interceptors.request.use(
     (config) => {
-        console.log(config)
+
         return config;
     },
     (error) => {
-        console.log(error)
+
         return Promise.reject(error);
     }
 );
@@ -23,7 +23,7 @@ api.interceptors.response.use(
         return response;
     },
     (error) => {
-        console.log(error)
+
         return Promise.reject(error);
     }
 );

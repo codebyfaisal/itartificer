@@ -1,0 +1,18 @@
+export const industries = [
+    { icon: "Activity", title: "Healthcare" },
+    { icon: "Truck", title: "Transport" },
+    { icon: "ShoppingCart", title: "Ecommerce & Retail" },
+    { icon: "Wallet", title: "Finance & Fintech" },
+    { icon: "Building2", title: "Real Estate" },
+    { icon: "GraduationCap", title: "Education" },
+    { icon: "Plane", title: "Travel & Hospitality" },
+    { icon: "Factory", title: "Manufacturing" },
+    { icon: "Car", title: "Fleet Management" },
+    { icon: "Clapperboard", title: "Entertainment" },
+    { icon: "HardHat", title: "Construction" },
+    { icon: "Landmark", title: "Government Sector" },
+    { icon: "HandHeart", title: "NonProfits & NGOs" },
+    { icon: "Scale", title: "Legal & Consultancy" },
+    { icon: "Leaf", title: "Agriculture" },
+    { icon: "Wifi", title: "Telecommunication" },
+];

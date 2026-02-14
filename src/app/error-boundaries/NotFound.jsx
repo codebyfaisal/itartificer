@@ -1,10 +1,15 @@
 import { Button } from "@/shared/ui";
+import SEO from "@/shared/components/SEO";
 import { Link } from "react-router";
 import { FaArrowLeft } from "react-icons/fa";
 
 const NotFound = () => {
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
+      <SEO
+        title="Page Not Found"
+        description="The page you are looking for does not exist."
+      />
       {/* Abstract Background Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-125 bg-primary/20 rounded-full blur-[100px] opacity-50 animate-[pulse_4s_ease-in-out_infinite]" />
       <div className="absolute top-0 right-0 size-125 bg-secondary/10 rounded-full blur-[80px]" />
@@ -14,7 +19,7 @@ const NotFound = () => {
         {/* Animated 404 Number */}
         <div className="relative select-none">
           <h1
-            className="text-[12rem] md:text-[16rem] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-linear-to-b from-secondary to-secondary/10 animate-[float_6s_ease-in-out_infinite]"
+            className="text-[12rem] md:text-[16rem] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-linear-to-b from-secondary to-secondary/10 animate-float"
             style={{ textShadow: "0 10px 30px rgba(0,0,0,0.05)" }}
           >
             404
@@ -24,7 +29,7 @@ const NotFound = () => {
 
         {/* Content */}
         <div className="space-y-6 -mt-8 md:-mt-16 animate-[slide-up_0.5s_ease-out]">
-          <h2 className="text-3xl md:text-5xl font-bold text-heading-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
             Oops! Page Not Found
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg mx-auto">

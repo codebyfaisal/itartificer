@@ -1,47 +1,52 @@
-import { FaEnvelopeOpen, FaPhoneAlt } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { Card } from "@/shared/ui";
+
+import { itArtificerData } from "@/shared/db/itArtificer";
 
 const contactCards = [
   {
-    icon: <FaEnvelopeOpen />,
+    icon: <Mail size={32} />,
     title: "Mail Here",
-    content: ["info@itartificer.com", "sales@itartificer.com"],
+    content: [itArtificerData.email.info, itArtificerData.email.sales],
   },
   {
-    icon: <FaLocationDot />,
+    icon: <MapPin size={32} />,
     title: "Visit Here",
-    content: ["KP IT Park, Zu Business Center Chamkani. Peshawar KP, Pakistan"],
+    content: itArtificerData.address,
   },
   {
-    icon: <FaPhoneAlt />,
+    icon: <Phone size={32} />,
     title: "Call Us Now",
-    content: ["+92 333 9296314", "+92 331 9119945"],
+    content: itArtificerData.phone,
   },
 ];
 
 const Contacts = () => {
   return (
     <section>
-      <div className="container py-20 grid grid-cols-1 md:grid-cols-3 items-center text-center gap-8">
+      <div className="container grid grid-cols-1 md:grid-cols-3 gap-8">
         {contactCards.map((card, index) => (
-          <div
+          <Card
             key={index}
-            className="flex flex-col items-center justify-center p-12 hover:-translate-y-1 group border border-border/60 hover:border-primary/50 rounded-lg bg-background text-foreground shadow-sm transition-all duration-300 hover:shadow-md"
+            variant="interactive"
+            className="flex flex-col items-center justify-center p-12 text-center group bg-background"
           >
-            <div className="p-0 flex flex-col items-center">
-              <div className="text-primary text-4xl group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 p-4 rounded-full aspect-square group-hover:scale-110 mb-2">
-                {card.icon}
-              </div>
-              <h3 className="text-xl font-semibold mt-3 mb-2 leading-none tracking-tight">
-                {card.title}
-              </h3>
-              {card.content.map((item, index) => (
-                <p key={index} className="text-secondary/80">
+            <div className="mb-6 p-4 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
+              {card.icon}
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-heading-foreground">
+              {card.title}
+            </h3>
+
+            <div className="space-y-1">
+              {card.content.map((item, i) => (
+                <p key={i} className="text-foreground/70 text-sm">
                   {item}
                 </p>
               ))}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

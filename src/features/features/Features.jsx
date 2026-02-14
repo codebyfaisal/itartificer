@@ -1,4 +1,5 @@
 import { PageHeader, SectionHeader } from "@/shared/components";
+import SEO from "@/shared/components/SEO";
 import {
   Cloud,
   Database,
@@ -90,18 +91,23 @@ const services = [
 const Features = () => {
   return (
     <>
+      <SEO
+        title="Features"
+        description="Explore the powerful features and technologies offered by IT Artificer."
+        path="/features"
+      />
       <PageHeader title="Features" />
 
       <Section
         title="Experience The Best Features Ever"
-        background="bg-secondary/5"
+        background="bg-linear-to-t from-primary/5 to-transparent pb-20"
         cards={features}
         order={[1, 2]}
         image="/images/features/best-features.webp"
       />
       <Section
         title="What Our Software Can Do For You"
-        background="bg-primary/5"
+        background="bg-linear-to-b from-secondary/5 to-transparent pt-20"
         cards={services}
         order={[2, 1]}
         image="/images/features/services.webp"
@@ -113,8 +119,8 @@ const Features = () => {
 const Section = ({ background, title, cards, order, image }) => {
   return (
     <section className={background}>
-      <div className="container py-20">
-        <div className="grid grid-cols-1 mdl:grid-cols-2 items-center">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
           <div
             className="max-w-md mx-auto relative group"
             style={{ order: order[0] }}
@@ -130,6 +136,7 @@ const Section = ({ background, title, cards, order, image }) => {
               className="absolute top-1/2 left-1/2 -translate-1/2 object-cover group-hover:scale-98 transition-all duration-500"
             />
           </div>
+
           <div className="space-y-8" style={{ order: order[1] }}>
             <SectionHeader title={title} align="left" className="py-0" />
             <div className="grid grid-cols-2 gap-4">

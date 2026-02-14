@@ -1,12 +1,18 @@
-import Divider from "@/shared/ui/Divider";
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router";
 
 const ServiceIntro = ({ title = "", subTitle = "", description = [] }) => {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground">
-          {title}
-        </h1>
+        <div className="flex items-center gap-2">
+          <Link to="/services">Services</Link>
+          <div className="flex items-center">
+            <ChevronRight size={16} />
+            <ChevronRight size={16} />
+          </div>
+          <p className="opacity-70">{title}</p>
+        </div>
         {subTitle && (
           <h2 className="text-lg font-medium text-muted-foreground">
             {subTitle}

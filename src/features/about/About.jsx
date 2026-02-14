@@ -1,10 +1,10 @@
 import {
   PageHeader,
   SectionHeader,
-  LeadershipTeam,
-  ClientFeedback,
-  CompanyStats,
-  ClientBrands,
+  TeamSection,
+  TestemonialsSection,
+  StatsSection,
+  ClientBrandsSection,
 } from "@/shared/components";
 import { Button } from "@/shared/ui";
 import SEO from "@/shared/components/SEO";
@@ -35,42 +35,49 @@ const About = () => {
             className="pb-0"
           />
 
-          <p>
-            Founded in 2012 as a training institute focused on building
-            technical talent, IT Artificer began with a simple mission: to
-            empower individuals with practical, job-ready skills in software and
-            technology.
-          </p>
+          <div className="text-foreground/80 space-y-4 leading-relaxed">
+            <p>
+              Founded in 2012 as a training institute focused on building
+              technical talent, IT Artificer began with a simple mission: to
+              empower individuals with practical, job-ready skills in software
+              and technology.
+            </p>
 
-          <p>
-            Over time, our passion for quality, innovation, and real-world
-            impact led us beyond education and into full-scale software
-            development. Today, IT Artificer stands as a dynamic software
-            solutions company, delivering custom-built applications, enterprise
-            platforms, and digital services to clients across industries.
-          </p>
-          <p>
-            Our roots in training have shaped our commitment to excellence,
-            making us not just developers—but thoughtful problem-solvers. Eleven
-            years on, our journey is still driven by the same values: learn
-            deeply, build boldly, and grow continuously.
-          </p>
+            <p>
+              Over time, our passion for quality, innovation, and real-world
+              impact led us beyond education and into full-scale software
+              development. Today, IT Artificer stands as a dynamic software
+              solutions company, delivering custom-built applications,
+              enterprise platforms, and digital services to clients across
+              industries.
+            </p>
+            <p>
+              Our roots in training have shaped our commitment to excellence,
+              making us not just developers—but thoughtful problem-solvers.
+              Eleven years on, our journey is still driven by the same values:
+              learn deeply, build boldly, and grow continuously.
+            </p>
+          </div>
 
-          <Button variant="outline" className="shadow-lg hover:shadow-xl">
+          <Button
+            variant="outline"
+            className="shadow-lg hover:shadow-xl text-foreground border-border hover:bg-secondary/10"
+          >
             Contact Us
           </Button>
         </div>
       </section>
 
-      <LeadershipTeam />
+      <TeamSection />
 
-      <ClientFeedback sectionTitle="Our Clients Feedback" />
+      <div className="p-8 lg:p-10"></div>
+      <TestemonialsSection sectionTitle="Our Clients Feedback" />
+      <div className="p-8 lg:p-10"></div>
 
-      <div className="bg-linear-to-b from-transparent to-primary/4">
-        <CompanyStats variant="light" />
+      <StatsSection variant="dark" />
+      <div className="mt-20 flex items-center justify-center">
+        <ClientBrandsSection />
       </div>
-
-      <ClientBrands />
     </>
   );
 };

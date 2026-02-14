@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useEffect } from "react";
 import { Check } from "lucide-react";
 import cn from "../utils/cn";
 

@@ -3,43 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const cards = [
-  {
-    href: "https://itaacademia.com/",
-    src: "/images/brands/ita-academia.webp",
-    alt: "ita-academia",
-  },
-  {
-    href: "https://kalewal.com/",
-    src: "/images/brands/kaliwal-fit.webp",
-    alt: "kaliwal-fit",
-  },
-  {
-    href: "https://itartificer.com/",
-    src: "/images/brands/mozbytech.webp",
-    alt: "mozbytech",
-  },
-  {
-    href: "https://traininghunts.com/",
-    src: "/images/brands/shopme-online.webp",
-    alt: "shopme-online",
-  },
-  {
-    href: "https://tasleemalquran.com/",
-    src: "/images/brands/taleemalquran.webp",
-    alt: "taleemalquran",
-  },
-  {
-    href: "https://writepure.com/",
-    src: "/images/brands/writepure.webp",
-    alt: "writepure",
-  },
-];
+import { clients as cards } from "@/shared/db/clients";
 
-const ClientBrands = () => {
+const ClientBrandsSection = () => {
   return (
     <section>
-      <div className="container py-20">
+      <div className="container">
         <SectionHeader
           title="Our Growing Family of Brands"
           description="From training and tech to e-commerce and education, our group of companies is driving impact across multiple industries."
@@ -66,7 +35,7 @@ const ClientBrands = () => {
               slidesPerView: 5,
             },
           }}
-          className="w-full"
+          className="w-full pl-8!"
         >
           {cards.map(({ href, src, alt }, index) => (
             <SwiperSlide
@@ -93,4 +62,4 @@ const ClientBrands = () => {
   );
 };
 
-export default ClientBrands;
+export default ClientBrandsSection;

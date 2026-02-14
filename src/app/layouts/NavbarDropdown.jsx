@@ -13,7 +13,7 @@ const NavbarDropdown = ({ item, depth = 0, isScrolled }) => {
       <Link
         to={item.path}
         className={cn(
-          "opacity-90 hover:opacity-100 block hover:text-primary rounded-sm transition-all whitespace-nowrap",
+          "opacity-90 text-foreground hover:opacity-100 block hover:text-primary rounded-sm transition-all whitespace-nowrap",
           pathname === item.path && "text-primary",
           item.navbar
             ? "border-t-2 border-transparent hover:border-primary"
@@ -34,7 +34,7 @@ const NavbarDropdown = ({ item, depth = 0, isScrolled }) => {
       <Link
         to={item.path || "#"}
         className={cn(
-          "flex items-center gap-1 opacity-90 hover:opacity-100 hover:text-primary border-t-2 border-transparent hover:border-primary rounded-md",
+          "flex items-center gap-1 opacity-90 hover:opacity-100 hover:text-primary border-t-2 border-transparent hover:border-primary rounded-md text-foreground",
           depth > 0 && "px-4 py-2 w-full justify-between border-0",
           pathname.includes(item.path) && "text-primary",
         )}
@@ -55,7 +55,7 @@ const NavbarDropdown = ({ item, depth = 0, isScrolled }) => {
 
       <div
         className={cn(
-          "absolute bg-background text-secondary shadow-lg rounded-md min-w-50 border border-secondary/10 transition-all duration-300 transform origin-top left-0",
+          "absolute bg-background text-foreground shadow-lg rounded-md min-w-50 border border-secondary/10 transition-all duration-300 transform origin-top left-0",
           depth === 0 ? "top-full" : "top-0 left-full",
           isOpen
             ? "opacity-100 visible translate-y-0"

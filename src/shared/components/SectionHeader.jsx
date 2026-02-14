@@ -5,7 +5,7 @@ const SectionHeader = ({ title, description, className, align = "center" }) => {
   return (
     <div
       className={cn(
-        "space-y-3 max-w-lg pb-14 flex flex-col justify-center",
+        "space-y-3 max-w-xl pb-14 flex flex-col justify-center",
         align === "center" && "text-center items-center mx-auto",
         align === "start" && "text-start items-start mx-0",
         align === "end" && "text-end items-end mx-0",

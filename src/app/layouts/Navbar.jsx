@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import Button from "@/shared/ui/Button";
 import { MenuIcon } from "lucide-react";
 import cn from "@/shared/utils/cn";
@@ -8,7 +8,7 @@ import { navigations } from "@/shared/data/navigation";
 import NavbarDropdown from "./NavbarDropdown";
 
 const Navbar = ({ toggleSidebar }) => {
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -24,33 +24,21 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <div
       className={cn(
-        "sticky top-0 z-50 transition-all -mb-21 py-3",
-        isScrolled ? "bg-background shadow-md" : "bg-transparent",
-        location.pathname !== "/" && "bg-background shadow-md",
-        isScrolled && location.pathname !== "/" && "bg-background shadow-md",
+        "fixed w-full top-0 z-50 transition-all duration-300 py-4",
+        isScrolled && "nav-glass",
       )}
     >
       <div className="container flex justify-between items-center">
-        <div className="flex items-center -translate-x-2 min-w-40 w-40">
+        <Link to="/" className="flex items-center -translate-x-2 min-w-40 w-40">
           <img
-            src="/images/logo/itartificer.webp"
+            src="/images/logo/itartificer-white.webp"
             alt="It Artificer-Logo"
-            className={cn(
-              "object-contain w-full h-full transition-all duration-300",
-              isScrolled || location.pathname !== "/" ? "" : "brightness-0 invert",
-            )}
+            className="object-contain w-full h-full transition-all duration-300"
           />
-        </div>
+        </Link>
 
-        <nav className="hidden mdl:block">
-          <ul
-            className={cn(
-              "flex gap-5 text-md font-medium transition-colors duration-300 items-center",
-              isScrolled ? "text-secondary" : "text-primary-foreground",
-              location.pathname !== "/" && "text-secondary!",
-              isScrolled && location.pathname !== "/" && "text-secondary!",
-            )}
-          >
+        <nav className="hidden lg:block">
+          <ul className="flex gap-5 text-md font-medium transition-colors duration-300 items-center">
             {navigations.map((navigation) =>
               navigation.navbar ? (
                 <li key={navigation.name}>
@@ -65,21 +53,11 @@ const Navbar = ({ toggleSidebar }) => {
           <MenuIcon
             size={24}
             onClick={toggleSidebar}
-            className={cn(
-              "cursor-pointer transition-colors duration-300",
-              isScrolled ? "text-secondary" : "text-primary-foreground",
-              location.pathname !== "/" && "text-secondary!",
-              isScrolled && location.pathname !== "/" && "text-secondary!",
-            )}
+            className="cursor-pointer transition-colors duration-300"
           />
 
           <Button
-            variant={cn(
-              isScrolled ? "primary" : "white",
-              location.pathname !== "/" && "primary!",
-              isScrolled && location.pathname !== "/" && "white!",
-            )}
-            className="mdl:px-5 lg:px-8 hidden [@media(min-width:990px)]:block uppercase font-bold"
+            className="md:px-5 lg:px-8 hidden [@media(min-width:990px)]:block uppercase font-bold"
             onClick={() => navigate("/contact")}
           >
             Contact Now

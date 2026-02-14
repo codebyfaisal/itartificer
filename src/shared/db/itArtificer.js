@@ -20,4 +20,4 @@ export const itArtificerData = {
         "Monday - Friday: 9:00 AM - 6:00 PM",
         "Saturday - Sunday: Closed"
     ]
-} 
+}

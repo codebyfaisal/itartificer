@@ -2,14 +2,14 @@ import { Circle, Plus, Triangle } from "lucide-react";
 
 const PageHeader = ({ title }) => {
   return (
-    <div className="relative min-h-[30vh] flex items-center justify-center bg-background w-full">
+    <div className="relative min-h-[35vh] flex items-center justify-center bg-background w-full mt-20 pb-8">
       {/* Background Graphic */}
       <div className="absolute top-0 right-0 h-full w-full pointer-events-none">
         {/* Subtle Wave */}
         <div className="absolute bottom-0 w-full h-30 bg-[url('/images/wave.svg')] bg-cover opacity-5"></div>
 
         {/* Decorator Shapes */}
-        <div className="absolute top-[20%] left-[10%] text-primary animate-[float_6s_ease-in-out_infinite]">
+        <div className="absolute top-[20%] left-[10%] text-primary animate-float">
           <Plus size={28} strokeWidth={3} className="opacity-40" />
         </div>
 
@@ -43,7 +43,7 @@ const PageHeader = ({ title }) => {
       </div>
 
       {/* Content */}
-      <h1 className="relative z-10 text-3xl md:text-4xl font-bold text-secondary tracking-tight capitalize max-w-3xl text-center">
+      <h1 className="relative z-10 text-3xl md:text-5xl font-bold text-foreground tracking-tight capitalize max-w-3xl text-center">
         {title}
       </h1>
     </div>

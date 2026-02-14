@@ -9,7 +9,7 @@ const SEO = ({
   return (
     <>
       {/* Standard SEO */}
-      <title>{`${title} | IT Artificer`}</title>
+      <title>{`${title} - IT Artificer`}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
 
