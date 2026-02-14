@@ -56,7 +56,8 @@ const ContactForm = ({ title = null }) => {
         {/* <div> */}
         <img
           src="/images/contact-us.webp"
-          alt=""
+          alt="Contact Our Team"
+          title="Contact Our Team"
           className="w-full h-auto rounded-md object-cover"
         />
         {/* </div> */}

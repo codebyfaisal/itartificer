@@ -21,11 +21,12 @@ const About = () => {
       <PageHeader title="About Us" />
 
       <section className="container grid grid-cols-1 md:grid-cols-2 items-center gap-10 pb-20">
-        <div className="">
+        <div>
           <img
             src="/images/about-us.webp"
-            alt=""
+            alt="About IT Artificer Team"
             className="w-full h-full object-cover drop-shadow-2xl"
+            title="About IT Artificer Team"
           />
         </div>
         <div className="space-y-4">

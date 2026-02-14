@@ -17,7 +17,9 @@ const ProductDetail = () => {
       <PageHeader title={product.title} />
       <div className="container">
         <div className="flex items-center gap-2 mb-4">
-          <Link to="/products">Products</Link>
+          <Link to="/products" aria-label="Products">
+            Products
+          </Link>
           <div className="flex items-center">
             <LucideIcons.ChevronRight size={16} />
             <LucideIcons.ChevronRight size={16} />

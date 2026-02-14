@@ -1,0 +1,11 @@
+/* TEAM */
+CEO: Haider Ali
+COO: Najm U Din
+Business Developer: Norab Ahmad
+Project Manager: Sheraz Ahmad
+
+/* SITE */
+Last update: 2026/02/14
+Standards: HTML5, CSS3, JavaScript, React
+Components: Tailwind CSS, Lucide React
+Software: VS Code

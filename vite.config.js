@@ -14,4 +14,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    cssCodeSplit: false, // Merge all CSS into one file
+    chunkSizeWarningLimit: 1000,
+  },
 })

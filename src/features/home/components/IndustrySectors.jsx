@@ -21,7 +21,10 @@ const IndustrySectors = () => {
                 key={index}
                 className="group flex flex-col items-center justify-center cursor-pointer hover:-translate-y-1"
               >
-                <div className="text-secondary mb-4 p-4 rounded-full bg-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 shadow-lg">
+                <div
+                  className="text-secondary mb-4 p-4 rounded-full bg-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 shadow-lg"
+                  aria-hidden="true"
+                >
                   <span className="[&>svg]:size-8">
                     <Icon />
                   </span>

@@ -24,7 +24,7 @@ const BlogDetail = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <img
             src={blog.image}
-            alt={blog.title}
+            alt={blog.title || "Blog Post Image"}
             className="w-full aspect-video object-cover rounded-xl shadow-lg"
           />
 

@@ -37,6 +37,7 @@ const CaseStudies = () => {
                   <Link
                     to={`/case-studies/${slug}`}
                     className="block text-xl font-bold text-foreground hover:text-primary transition-colors line-clamp-2"
+                    aria-label={title}
                   >
                     {title}
                   </Link>
@@ -48,6 +49,7 @@ const CaseStudies = () => {
                 <Link
                   to={`/case-studies/${slug}`}
                   className="text-primary font-medium flex items-center gap-2 hover:underline decoration-2 underline-offset-4 transition-all whitespace-nowrap w-full lg:w-auto group mt-4"
+                  aria-label={`Read case study: ${title}`}
                 >
                   More Details
                   <SquareArrowRight className="transition-all duration-100 size-4 group-hover:size-5" />

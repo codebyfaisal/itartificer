@@ -29,11 +29,16 @@ const Navbar = ({ toggleSidebar }) => {
       )}
     >
       <div className="container flex justify-between items-center">
-        <Link to="/" className="flex items-center -translate-x-2 min-w-40 w-40">
+        <Link
+          to="/"
+          className="flex items-center -translate-x-2 min-w-40 w-40"
+          aria-label="IT Artificer Home"
+        >
           <img
             src="/images/logo/itartificer-white.webp"
             alt="It Artificer-Logo"
             className="object-contain w-full h-full transition-all duration-300"
+            title="It Artificer-Logo"
           />
         </Link>
 

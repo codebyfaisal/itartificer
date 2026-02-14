@@ -45,13 +45,14 @@ const ClientBrandsSection = () => {
               <a
                 href={href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-block max-w-45 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
               >
                 <img
                   src={src}
-                  className="w-full h-auto object-contain"
                   alt={alt}
+                  title={alt}
+                  className="w-full h-auto object-contain"
                 />
               </a>
             </SwiperSlide>

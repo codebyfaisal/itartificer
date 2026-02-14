@@ -37,7 +37,7 @@ export const navigations = [
       },
       {
         name: "Domain & Cloud Hosting",
-        path: "/services/domain-&-cloud-hosting",
+        path: "/services/domain-and-cloud-hosting",
       },
       {
         name: "Software Development",
@@ -49,7 +49,7 @@ export const navigations = [
       },
       {
         name: "AI & Data Solutions",
-        path: "/services/ai-&-data-solutions",
+        path: "/services/ai-and-data-solutions",
       },
       {
         name: "Mobile App Development",
@@ -101,7 +101,7 @@ export const navigations = [
           },
           {
             name: "Billing & Invoice Software",
-            path: "/products/business-enterprise/billing-&-invoice-software",
+            path: "/products/business-enterprise/billing-and-invoice-software",
           },
           {
             name: "Document Management System",
@@ -109,11 +109,11 @@ export const navigations = [
           },
           {
             name: "HR & Payroll Software",
-            path: "/products/business-enterprise/hr-&-payroll-software",
+            path: "/products/business-enterprise/hr-and-payroll-software",
           },
           {
             name: "Inventory & POS Software",
-            path: "/products/business-enterprise/inventory-&-pos-software",
+            path: "/products/business-enterprise/inventory-and-pos-software",
           },
         ],
       },
@@ -123,11 +123,11 @@ export const navigations = [
         children: [
           {
             name: "E-Commerce Platform",
-            path: "/products/commerce-&-marketplace/e-commerce-platform",
+            path: "/products/commerce-and-marketplace/e-commerce-platform",
           },
           {
             name: "Property Management System",
-            path: "/products/commerce-&-marketplace/property-management-system",
+            path: "/products/commerce-and-marketplace/property-management-system",
           },
         ],
       },
@@ -137,19 +137,19 @@ export const navigations = [
         children: [
           {
             name: "Learning Management System",
-            path: "/products/healthcare-&-education/learning-management-system",
+            path: "/products/healthcare-and-education/learning-management-system",
           },
           {
             name: "School & College Software",
-            path: "/products/healthcare-&-education/school-&-college-software",
+            path: "/products/healthcare-and-education/school-and-college-software",
           },
           {
             name: "Clinic & Hospital MIS",
-            path: "/products/healthcare-&-education/clinic-&-hospital-mis",
+            path: "/products/healthcare-and-education/clinic-and-hospital-mis",
           },
           {
             name: "Appointment Booking App",
-            path: "/products/healthcare-&-education/appointment-booking-app",
+            path: "/products/healthcare-and-education/appointment-booking-app",
           },
         ],
       },
@@ -173,11 +173,11 @@ export const navigations = [
         children: [
           {
             name: "AI Chatbot Builder",
-            path: "/products/ai-&-smart-solutions/ai-chatbot-builder",
+            path: "/products/ai-and-smart-solutions/ai-chatbot-builder",
           },
           {
             name: "Visitor Management System",
-            path: "/products/ai-&-smart-solutions/visitor-management-system",
+            path: "/products/ai-and-smart-solutions/visitor-management-system",
           },
         ],
       },
@@ -233,7 +233,7 @@ export const navigations = [
   },
   {
     name: "Terms & Conditions",
-    path: "/terms-&-conditions",
+    path: "/terms-and-conditions",
     icon: <BadgeQuestionMark size={18} />,
     navbar: false,
   },

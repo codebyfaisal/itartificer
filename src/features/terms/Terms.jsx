@@ -9,7 +9,7 @@ const Terms = () => {
       <SEO
         title="Terms & Conditions"
         description="Read IT Artificer's Terms & Conditions."
-        path="/terms-&-conditions"
+        path="/terms-and-conditions"
       />
       <PageHeader title="Terms & Conditions" />
 

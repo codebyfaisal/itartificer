@@ -31,6 +31,7 @@ const TestemonialsSection = ({ sectionTitle }) => {
                     <img
                       src="/images/profile.webp"
                       alt={name}
+                      title={name}
                       className="w-full h-full object-cover"
                     />
                   </div>

@@ -124,6 +124,7 @@ const Community = () => {
                 <Link
                   to={`mailto:${itArtificerData.email.info}`}
                   className="hover:underline"
+                  aria-label="Email"
                 >
                   {itArtificerData.email.info}
                 </Link>
@@ -133,6 +134,7 @@ const Community = () => {
                 <Link
                   to={`tel:${itArtificerData.phone}`}
                   className="hover:underline"
+                  aria-label="Phone"
                 >
                   {itArtificerData.phone[0]}
                 </Link>

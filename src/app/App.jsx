@@ -88,7 +88,7 @@ const router = createBrowserRouter([
         lazy: async () => ({ Component: (await Faq()).default }),
       },
       {
-        path: "terms-&-conditions",
+        path: "terms-and-conditions",
         lazy: async () => ({ Component: (await Terms()).default }),
       },
       {

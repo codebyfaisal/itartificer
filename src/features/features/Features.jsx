@@ -127,12 +127,14 @@ const Section = ({ background, title, cards, order, image }) => {
           >
             <img
               src="/images/features/circle-shape.webp"
-              alt=""
+              alt="circle shape"
+              title="circle shape"
               className="animate-spin [animation-duration:100s] w-full h-auto object-cover aspect-square transition-all duration-500 drop-shadow-xs group-hover:scale-105"
             />
             <img
               src={image}
-              alt=""
+              alt={title}
+              title={title}
               className="absolute top-1/2 left-1/2 -translate-1/2 object-cover group-hover:scale-98 transition-all duration-500"
             />
           </div>

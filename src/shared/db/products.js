@@ -14,7 +14,7 @@ export const products = [
     },
     {
         title: "Billing & Invoice Software",
-        slug: "/products/business-enterprise/billing-&-invoice-software",
+        slug: "/products/business-enterprise/billing-and-invoice-software",
         description: "Simplify your billing process and manage invoices efficiently.",
         icon: "FileText",
     },
@@ -26,13 +26,13 @@ export const products = [
     },
     {
         title: "HR & Payroll Software",
-        slug: "/products/business-enterprise/hr-&-payroll-software",
+        slug: "/products/business-enterprise/hr-and-payroll-software",
         description: "Automate HR processes, attendance, and payroll management.",
         icon: "Users",
     },
     {
         title: "Inventory & POS Software",
-        slug: "/products/business-enterprise/inventory-&-pos-software",
+        slug: "/products/business-enterprise/inventory-and-pos-software",
         description: "Manage inventory in real-time and streamline point-of-sale operations.",
         icon: "ClipboardList",
     },
@@ -40,13 +40,13 @@ export const products = [
     // Commerce & Marketplace
     {
         title: "E-Commerce Platform",
-        slug: "/products/commerce-&-marketplace/e-commerce-platform",
+        slug: "/products/commerce-and-marketplace/e-commerce-platform",
         description: "Launch your online store with our robust and scalable e-commerce solution.",
         icon: "ShoppingCart",
     },
     {
         title: "Property Management System",
-        slug: "/products/commerce-&-marketplace/property-management-system",
+        slug: "/products/commerce-and-marketplace/property-management-system",
         description: "Efficiently manage properties, tenants, and leases.",
         icon: "Building2",
     },
@@ -54,25 +54,25 @@ export const products = [
     // Healthcare & Education
     {
         title: "Learning Management System",
-        slug: "/products/healthcare-&-education/learning-management-system",
+        slug: "/products/healthcare-and-education/learning-management-system",
         description: "Deliver and manage educational content and training programs online.",
         icon: "BookOpen",
     },
     {
         title: "School & College Software",
-        slug: "/products/healthcare-&-education/school-&-college-software",
+        slug: "/products/healthcare-and-education/school-and-college-software",
         description: "Comprehensive management system for educational institutions.",
         icon: "School",
     },
     {
         title: "Clinic & Hospital MIS",
-        slug: "/products/healthcare-&-education/clinic-&-hospital-mis",
+        slug: "/products/healthcare-and-education/clinic-and-hospital-mis",
         description: "Integrated management information system for healthcare facilities.",
         icon: "HeartPulse",
     },
     {
         title: "Appointment Booking App",
-        slug: "/products/healthcare-&-education/appointment-booking-app",
+        slug: "/products/healthcare-and-education/appointment-booking-app",
         description: "Easy scheduling and appointment management for patients and providers.",
         icon: "Calendar", // Assuming Calendar icon exists or use generic
     },
@@ -94,13 +94,13 @@ export const products = [
     // AI & Smart Solutions
     {
         title: "AI Chatbot Builder",
-        slug: "/products/ai-&-smart-solutions/ai-chatbot-builder",
+        slug: "/products/ai-and-smart-solutions/ai-chatbot-builder",
         description: "Build intelligent chatbots to automate customer support and engagement.",
         icon: "Bot", // Assuming Bot icon exists
     },
     {
         title: "Visitor Management System",
-        slug: "/products/ai-&-smart-solutions/visitor-management-system",
+        slug: "/products/ai-and-smart-solutions/visitor-management-system",
         description: "Secure and streamline visitor registration and tracking.",
         icon: "UserCheck", // Assuming icon
     },

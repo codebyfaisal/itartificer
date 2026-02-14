@@ -1,32 +1,69 @@
+import { useEffect } from "react";
+
 const SEO = ({
   title = "IT Artificer",
   description = "IT Artificer is a leading software development company specializing in custom software development, mobile app development, and web development services.",
   path = "",
-  image = "/images/logo.png",
+  image = "/images/logo/itartificer.webp",
 }) => {
-  const url = `https://itartificer.com${path}`;
+  const url = `https://itartificer.netlify.app${path}`;
+  const imageUrl = image.startsWith("http")
+    ? image
+    : `https://itartificer.netlify.app${image}`;
 
-  return (
-    <>
-      {/* Standard SEO */}
-      <title>{`${title} - IT Artificer`}</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
+  const fullTitle = path === "" ? title : `${title} - IT Artificer`;
 
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+  useEffect(() => {
+    // 1. Update Title
+    document.title = fullTitle;
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-    </>
-  );
+    // 2. Helper to update or create meta tags
+    const updateMeta = (name, content) => {
+      let element = document.querySelector(`meta[name="${name}"]`);
+      if (!element) {
+        element = document.createElement("meta");
+        element.setAttribute("name", name);
+        document.head.appendChild(element);
+      }
+      element.setAttribute("content", content);
+    };
+
+    const updateMetaProperty = (property, content) => {
+      let element = document.querySelector(`meta[property="${property}"]`);
+      if (!element) {
+        element = document.createElement("meta");
+        element.setAttribute("property", property);
+        document.head.appendChild(element);
+      }
+      element.setAttribute("content", content);
+    };
+
+    // 3. Update Meta Tags
+    updateMeta("description", description);
+
+    // Canonical
+    let linkCanonical = document.querySelector("link[rel='canonical']");
+    if (!linkCanonical) {
+      linkCanonical = document.createElement("link");
+      linkCanonical.setAttribute("rel", "canonical");
+      document.head.appendChild(linkCanonical);
+    }
+    linkCanonical.setAttribute("href", url);
+
+    // Open Graph
+    updateMetaProperty("og:url", url);
+    updateMetaProperty("og:title", fullTitle);
+    updateMetaProperty("og:description", description);
+    updateMetaProperty("og:image", imageUrl);
+
+    // Twitter
+    updateMeta("twitter:card", "summary_large_image");
+    updateMeta("twitter:title", fullTitle);
+    updateMeta("twitter:description", description);
+    updateMeta("twitter:image", imageUrl);
+  }, [fullTitle, description, url, imageUrl]);
+
+  return null; // Render nothing, just manage side effects
 };
 
 export default SEO;

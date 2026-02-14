@@ -132,6 +132,7 @@ const Career = () => {
                     <Link
                       to="/"
                       className="text-xl! underline decoration-1 hover:decoration-2 underline-offset-2 transition-all text-primary"
+                      aria-label={career.title}
                     >
                       {career.title}
                     </Link>
@@ -146,6 +147,7 @@ const Career = () => {
                   <Link
                     to="/"
                     className="text-primary font-medium flex items-center gap-2 hover:underline decoration-2 underline-offset-4 transition-all whitespace-nowrap w-full lg:w-auto group"
+                    aria-label="More Details"
                   >
                     More Details
                     <SquareArrowRight

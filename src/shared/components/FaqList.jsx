@@ -15,6 +15,7 @@ const ServiceFaq = ({ title = "", items = [] }) => {
         <img
           src="/images/faq.webp"
           alt="faq"
+          title="faq"
           className="w-full h-auto object-cover"
         />
       </div>

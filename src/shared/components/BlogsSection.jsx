@@ -14,11 +14,16 @@ const BlogsCard = ({ blog }) => {
 
   return (
     <Card variant="interactive" className="h-full group flex flex-col p-0">
-      <Link to={slug} className="block overflow-hidden relative">
+      <Link
+        to={slug}
+        className="block overflow-hidden relative"
+        aria-label={title}
+      >
         <div className="aspect-video w-full overflow-hidden">
           <img
             src={image}
             alt={title}
+            title={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
@@ -39,6 +44,7 @@ const BlogsCard = ({ blog }) => {
         <Link
           to={slug}
           className="group-hover:text-primary transition-colors block mb-3"
+          aria-label={title}
         >
           <h3 className="text-lg md:text-xl font-bold leading-tight line-clamp-2">
             {title}
@@ -55,6 +61,7 @@ const BlogsCard = ({ blog }) => {
           <Link
             to={slug}
             className="inline-flex items-center text-primary font-medium text-sm hover:underline gap-1 group/link"
+            aria-label={`Read full article: ${title}`}
           >
             Read More
             <FaArrowRight

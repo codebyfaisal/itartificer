@@ -113,7 +113,7 @@ export const services = [
         title: "Domain & Cloud Hosting",
         description:
             "Get fast, secure, and scalable domain & cloud hosting solutions with IT Artificer—perfect for businesses, startups, and…",
-        slug: "domain-&-cloud-hosting",
+        slug: "domain-and-cloud-hosting",
         link: "/services/domain-cloud-hosting",
         icon: "Cloud",
         details: {
@@ -177,7 +177,7 @@ export const services = [
         title: "AI & Data Solutions",
         description:
             "Unlock smarter business decisions with IT Artificer's AI and data solutions—driven by automation, analytics …",
-        slug: "ai-&-data-solutions",
+        slug: "ai-and-data-solutions",
         link: "/services/ai-data-solutions",
         icon: "Database",
         details: {

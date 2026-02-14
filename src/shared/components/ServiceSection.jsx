@@ -12,6 +12,8 @@ const ServiceSection = ({ cards = [] }) => {
               key={index}
               variant="interactive"
               className="group flex flex-col h-full hover:bg-tech-mesh border-0"
+              itemScope
+              itemType="https://schema.org/Service"
             >
               <div className="mb-6">
                 <span className="inline-flex items-center justify-center size-14 rounded-full bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
@@ -19,11 +21,17 @@ const ServiceSection = ({ cards = [] }) => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+              <h3
+                className="text-xl font-bold mb-3 group-hover:text-primary transition-colors"
+                itemProp="name"
+              >
                 {card.title}
               </h3>
 
-              <p className="text-sm leading-relaxed mb-6 grow">
+              <p
+                className="text-sm leading-relaxed mb-6 grow"
+                itemProp="description"
+              >
                 {card.description}
               </p>
 
@@ -31,6 +39,7 @@ const ServiceSection = ({ cards = [] }) => {
                 <Link
                   to={card.slug}
                   className="inline-flex items-center text-primary font-semibold text-sm group/slug"
+                  aria-label={`More details about ${card.title}`}
                 >
                   <span>More Details</span>
                   <ArrowRight

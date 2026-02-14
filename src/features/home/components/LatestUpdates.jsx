@@ -17,7 +17,7 @@ const LatestUpdates = () => {
             className="p-0"
           />
 
-          <Link to="/news">
+          <Link to="/news" aria-label="View all news and articles">
             <Button variant="outline">
               View All Articles <ArrowRight size={18} className="ml-2" />
             </Button>

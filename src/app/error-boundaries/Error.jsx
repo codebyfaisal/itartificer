@@ -43,6 +43,7 @@ const Error = () => {
             <Link
               to="/"
               className="text-primary hover:underline underline-offset-4"
+              aria-label="Return to Home"
             >
               Return to Home
             </Link>

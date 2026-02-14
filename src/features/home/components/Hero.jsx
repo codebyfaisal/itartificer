@@ -15,7 +15,7 @@ const TRANSITION_SPEED = 1500;
 const slides = [
   {
     image: "/images/home/hero-1.webp",
-    title: ["We deliver because of", "our culture"],
+    title: ["Best Software Company ", "In Peshawar"],
     color: "#32a8a4",
   },
   {
@@ -69,7 +69,8 @@ const HomeHero = () => {
                 <img
                   src={slide.image}
                   className="w-full h-full object-cover"
-                  alt="hero"
+                  alt={slide.title.join(" ")}
+                  title={slide.title.join(" ")}
                 />
               </SwiperSlide>
             ))}

@@ -3,6 +3,24 @@
   publish = "dist"
 
 [[redirects]]
+  from = "https://www.itartificer.com/*"
+  to = "https://itartificer.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.itartificer.netlify.app/*"
+  to = "https://itartificer.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

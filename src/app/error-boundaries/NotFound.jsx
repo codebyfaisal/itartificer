@@ -42,14 +42,20 @@ const NotFound = () => {
               size="lg"
               className="group min-w-50 shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300"
             >
-              <Link to="/" className="flex items-center gap-2">
+              <Link
+                to="/"
+                className="flex items-center gap-2"
+                aria-label="Back to Home"
+              >
                 <FaArrowLeft className="size-4 group-hover:-translate-x-1 transition-transform" />
                 Back to Home
               </Link>
             </Button>
 
             <Button variant="outline" size="lg" className="min-w-50">
-              <Link to="/contact">Report Issue</Link>
+              <Link to="/contact" aria-label="Report Issue">
+                Report Issue
+              </Link>
             </Button>
           </div>
         </div>

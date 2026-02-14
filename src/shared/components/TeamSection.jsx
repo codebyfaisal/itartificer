@@ -134,13 +134,16 @@ const TeamSection = () => {
               <img
                 src={cardData.image}
                 alt={cardData.name}
+                title={cardData.name}
                 className="w-30 h-30 object-cover rounded-full"
               />
               <div className="pt-4 pb-2">
-                <h3 className="text-lg leading-tight">{cardData.name}</h3>
-                <h2 className="text-lg font-bold! text-primary! uppercase tracking-wide">
+                <div className="text-lg leading-tight font-bold">
+                  {cardData.name}
+                </div>
+                <div className="text-lg font-bold! text-primary! uppercase tracking-wide">
                   {cardData.role}
-                </h2>
+                </div>
               </div>
               <p className="text-muted-foreground leading-tight">
                 {cardData.description}
@@ -157,18 +160,19 @@ const TeamSection = () => {
               >
                 <img
                   src={member.image}
-                  alt=""
+                  alt={member.name}
                   style={{
                     width: `${member.size * 100}px`,
                     height: `${member.size * 100}px`,
                   }}
                   className="rounded-full"
+                  title={member.name}
                 />
                 <div className="pt-4 pb-2">
                   <h3 className="text-lg leading-tight">{member.name}</h3>
-                  <h2 className="text-lg font-bold! text-primary! uppercase tracking-wide">
+                  <div className="text-lg font-bold! text-primary! uppercase tracking-wide">
                     {member.role}
-                  </h2>
+                  </div>
                 </div>
                 <p className="text-muted-foreground leading-tight">
                   {member.description}
@@ -176,6 +180,12 @@ const TeamSection = () => {
               </Card>
             ))}
           </div>
+
+          {/* SEO Content Injection (Hidden from visual layout but available for crawlers) */}
+          <p className="sr-only">
+            Learn more about the Best Software Company In Peshawar and our team
+            of experts.
+          </p>
         </div>
       </div>
     </section>
@@ -197,12 +207,19 @@ const TeamBubble = ({
       )}
       onMouseOver={() => onMouseOver(member)}
       onMouseLeave={() => onMouseLeave()}
+      itemScope
+      itemType="https://schema.org/Person"
     >
       <img
         src={member.image}
         alt={member.name}
         className="w-full h-full object-cover rounded-full"
+        loading="lazy"
+        itemProp="image"
+        title={member.name}
       />
+      <meta itemProp="name" content={member.name} />
+      <meta itemProp="jobTitle" content={member.role} />
     </div>
   );
 };

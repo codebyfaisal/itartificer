@@ -19,6 +19,7 @@ const NavbarDropdown = ({ item, depth = 0, isScrolled }) => {
             ? "border-t-2 border-transparent hover:border-primary"
             : "px-4 py-2 hover:bg-primary/10",
         )}
+        aria-label={item.name}
       >
         {item.name}
       </Link>
@@ -38,6 +39,7 @@ const NavbarDropdown = ({ item, depth = 0, isScrolled }) => {
           depth > 0 && "px-4 py-2 w-full justify-between border-0",
           pathname.includes(item.path) && "text-primary",
         )}
+        aria-label={item.name}
       >
         {item.name}
         {depth === 0 ? (

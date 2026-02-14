@@ -10,7 +10,7 @@ export const clients = [
         alt: "kaliwal-fit",
     },
     {
-        href: "https://itartificer.com/",
+        href: "https://itartificer.netlify.app/",
         src: "/images/brands/mozbytech.webp",
         alt: "mozbytech",
     },
@@ -23,10 +23,5 @@ export const clients = [
         href: "https://tasleemalquran.com/",
         src: "/images/brands/taleemalquran.webp",
         alt: "taleemalquran",
-    },
-    {
-        href: "https://writepure.com/",
-        src: "/images/brands/writepure.webp",
-        alt: "writepure",
     },
 ];

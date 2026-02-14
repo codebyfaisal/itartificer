@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itartificer.netlify.app/sitemap.xml

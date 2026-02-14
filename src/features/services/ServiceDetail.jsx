@@ -54,6 +54,7 @@ const ServiceDetail = () => {
                 <img
                   src="/images/contact-us.webp"
                   alt={intro?.title || "Service Image"}
+                  title={intro?.title || "Service Image"}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -63,6 +64,7 @@ const ServiceDetail = () => {
                 <img
                   src={image}
                   alt={intro?.title || "Service Image"}
+                  title={intro?.title || "Service Image"}
                   className="w-full h-auto object-cover"
                 />
               </div>

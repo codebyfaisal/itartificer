@@ -12,6 +12,7 @@ const SidebarDropdown = ({ item, depth = 0 }) => {
       <Link
         to={item.path}
         className="flex items-center gap-2 h-full px-6 py-3 w-full hover:bg-primary/5 hover:text-primary transition-colors"
+        aria-label={item.name}
       >
         {item.icon && <span>{item.icon}</span>}
         <span>{item.name}</span>
@@ -28,6 +29,7 @@ const SidebarDropdown = ({ item, depth = 0 }) => {
         <Link
           to={item.path || "#"}
           className="flex items-center gap-2 cursor-pointer"
+          aria-label={item.name}
         >
           {item.icon && <span>{item.icon}</span>}
           <span>{item.name}</span>

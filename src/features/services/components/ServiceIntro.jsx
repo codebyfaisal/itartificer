@@ -6,7 +6,9 @@ const ServiceIntro = ({ title = "", subTitle = "", description = [] }) => {
     <div className="space-y-6">
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <Link to="/services">Services</Link>
+          <Link to="/services" aria-label="Services">
+            Services
+          </Link>
           <div className="flex items-center">
             <ChevronRight size={16} />
             <ChevronRight size={16} />

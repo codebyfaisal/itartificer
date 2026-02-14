@@ -29,6 +29,7 @@ const Footer = () => {
                   src="/images/logo/itartificer-white.webp"
                   alt="IT Artificer"
                   className="w-40 mb-10"
+                  title="IT Artificer"
                 />
               </div>
 
@@ -42,6 +43,7 @@ const Footer = () => {
               <a
                 href="mailto:info@itartificer.com"
                 className="text-primary/70 hover:text-primary transition-colors block"
+                aria-label="Email IT Artificer"
               >
                 info@itartificer.com
               </a>
@@ -49,12 +51,14 @@ const Footer = () => {
                 <a
                   href="#"
                   className="w-10 h-10 rounded-full bg-foreground text-secondary flex items-center justify-center hover:bg-primary hover:text-foreground transition-all"
+                  aria-label="Visit our LinkedIn profile"
                 >
                   <FaLinkedinIn />
                 </a>
                 <a
                   href="#"
                   className="w-10 h-10 rounded-full bg-foreground text-secondary flex items-center justify-center hover:bg-primary hover:text-foreground transition-all"
+                  aria-label="Visit our YouTube channel"
                 >
                   <FaYoutube />
                 </a>
@@ -74,6 +78,7 @@ const Footer = () => {
                     <Link
                       to={item.slug}
                       className="text-foreground/70 hover:text-primary transition-colors text-sm"
+                      aria-label={item.name}
                     >
                       {item.name}
                     </Link>
@@ -92,6 +97,7 @@ const Footer = () => {
                     <Link
                       to={item.slug}
                       className="text-foreground/70 hover:text-primary transition-colors text-sm"
+                      aria-label={item.name}
                     >
                       {item.name}
                     </Link>
@@ -127,6 +133,7 @@ const Footer = () => {
                   src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
                   alt="reCAPTCHA"
                   className="w-8 opacity-50"
+                  title="reCAPTCHA"
                 />
               </div>
 
@@ -149,13 +156,15 @@ const Footer = () => {
           <p>&copy; 2026 IT Artificer Limited</p>
           <div className="flex gap-x-6 flex-wrap items-center justify-center">
             <Link
-              to="/terms-&-conditions"
+              to="/terms-and-conditions"
               className="hover:text-foreground transition-colors"
+              aria-label="Terms & Conditions"
             >
               Terms & Conditions
             </Link>
             <Link
               to="/privacy-policy"
+              aria-label="Privacy Policy"
               className="hover:text-foreground transition-colors"
             >
               Privacy Policy
